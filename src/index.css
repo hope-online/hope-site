@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-300: #d9f99d;
+  --color-brand-400: #a3e635;
+  --color-brand-500: #84cc16;
+  --color-brand-600: #65a30d;
+
+  --color-noite: #0a0f0c;
+
+  --animate-aparecer: aparecer 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-tag: tag 0.35s ease-out both;
+  --animate-flutuar: flutuar 5s ease-in-out infinite alternate;
+
+  @keyframes aparecer {
+    from { opacity: 0; transform: translate(-50%, 14px) scale(0.9) rotate(6deg); }
+    to { opacity: 1; transform: translate(-50%, 0) scale(1) rotate(2deg); }
+  }
+  @keyframes tag {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes flutuar {
+    from { transform: translateY(-8px) rotate(-2deg); }
+    to { transform: translateY(10px) rotate(2deg); }
+  }
+}
+
+html {
+  scroll-behavior: auto;
+  overflow-x: clip;
+}
+
+body {
+  font-family: var(--font-body);
+  @apply bg-white text-slate-900 antialiased dark:bg-noite dark:text-slate-100;
+  overflow-x: clip;
+}
+
+::selection {
+  @apply bg-brand-500 text-white;
+}
+
+/* Barra de progresso de scroll (animada via GSAP) */
+#progresso-scroll {
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+
+/* Texto gigante vazado (footer) */
+.texto-vazado {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgb(163 230 53 / 0.35);
+}
