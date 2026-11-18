@@ -9,14 +9,14 @@ type Item =
   | { tipo: 'cta' }
 
 const itens: Item[] = [
-  { tipo: 'foto', src: '/fotos/DSC00051.jpg', alt: 'Congregação em adoração' },
-  { tipo: 'foto', src: '/fotos/DSC00021.jpg', alt: 'Ministério de dança com bandeiras' },
+  { tipo: 'foto', src: './fotos/DSC00051.jpg', alt: 'Congregação em adoração' },
+  { tipo: 'foto', src: './fotos/DSC00021.jpg', alt: 'Ministério de dança com bandeiras' },
   { tipo: 'texto', principal: '“ninguém caminha sozinho.”', secundario: 'a mesma mensagem há mais de 30 anos' },
-  { tipo: 'foto', src: '/fotos/DSC00095.jpg', alt: 'Louvor e adoração no palco' },
-  { tipo: 'foto', src: '/fotos/DSC00071.jpg', alt: 'Família adorando no culto' },
-  { tipo: 'foto', src: '/fotos/DSC00001.jpg', alt: 'Momento de acolhimento' },
+  { tipo: 'foto', src: './fotos/DSC00095.jpg', alt: 'Louvor e adoração no palco' },
+  { tipo: 'foto', src: './fotos/DSC00071.jpg', alt: 'Família adorando no culto' },
+  { tipo: 'foto', src: './fotos/DSC00001.jpg', alt: 'Momento de acolhimento' },
   { tipo: 'texto', principal: 'sua cadeira', secundario: 'já está guardada pra você' },
-  { tipo: 'foto', src: '/fotos/DSC00121.jpg', alt: 'Igreja em momento de louvor' },
+  { tipo: 'foto', src: './fotos/DSC00121.jpg', alt: 'Igreja em momento de louvor' },
   { tipo: 'cta' },
 ]
 

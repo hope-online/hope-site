@@ -5,21 +5,21 @@ import { dividirEmLetras } from '../lib/letras'
 
 const colagem = [
   {
-    src: '/fotos/DSC00051.jpg',
+    src: './fotos/DSC00051.jpg',
     alt: 'Congregação da Igreja Esperança em adoração',
     classe: 'left-0 top-0 aspect-[3/2] w-[68%] sm:w-[56%] rotate-[-1deg]',
     vel: 0.5,
     legenda: 'Domingo de manhã',
   },
   {
-    src: '/fotos/DSC00071.jpg',
+    src: './fotos/DSC00071.jpg',
     alt: 'Pai com filho no colo durante o culto',
     classe: 'right-0 top-[16%] aspect-[3/4] w-[56%] rotate-[2deg] sm:top-[10%] sm:w-[40%]',
     vel: 1.3,
     legenda: 'Famílias inteiras',
   },
   {
-    src: '/fotos/DSC00061.jpg',
+    src: './fotos/DSC00061.jpg',
     alt: 'Mulher em adoração com as mãos levantadas',
     classe: 'left-[14%] bottom-[0%] aspect-[3/4] w-[52%] rotate-[-2deg] sm:bottom-[4%] sm:left-[24%] sm:w-[36%]',
     vel: 0.8,
@@ -136,11 +136,11 @@ export function Sobre() {
 
         <p className="mt-12 max-w-4xl font-display text-2xl font-medium leading-snug tracking-tight sm:text-4xl">
           Uma igreja
-          <FotoInline src="/fotos/DSC00001.jpg" alt="Abraço entre duas pessoas no culto" />
+          <FotoInline src="./fotos/DSC00001.jpg" alt="Abraço entre duas pessoas no culto" />
           viva — gente de toda história
-          <FotoInline src="/fotos/DSC00021.jpg" alt="Ministério de dança com bandeiras" />
+          <FotoInline src="./fotos/DSC00021.jpg" alt="Ministério de dança com bandeiras" />
           , cultos com vida
-          <FotoInline src="/fotos/DSC00095.jpg" alt="Louvor no palco" />
+          <FotoInline src="./fotos/DSC00095.jpg" alt="Louvor no palco" />
           e uma mesa sempre preparada pra você.
         </p>
 

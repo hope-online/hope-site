@@ -43,7 +43,7 @@ export function Preloader() {
     >
       <div data-loader-painel className="flex h-full flex-col justify-between">
         <img
-          src="/logo.jpg"
+          src="./logo.jpg"
           alt="Igreja Esperança"
           data-loader-logo
           className="w-44 mix-blend-lighten sm:w-60"

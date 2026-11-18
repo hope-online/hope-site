@@ -5,7 +5,7 @@ import * as THREE from 'three'
 
 export type ProgressRef = { current: number }
 
-const CAMINHO_PANORAMA = '/panorama/igreja.jpg'
+const CAMINHO_PANORAMA = './panorama/igreja.jpg'
 
 function usarArraste(alvo: { current: { drag: number; pitch: number } }) {
   const arrastando = useRef(false)

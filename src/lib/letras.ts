@@ -13,17 +13,28 @@ export function dividirEmLetras(el: HTMLElement): HTMLElement[] {
     if (node.nodeType === Node.TEXT_NODE) {
       const texto = node.textContent ?? ''
       const frag = document.createDocumentFragment()
-      for (const ch of texto) {
-        if (ch === ' ') {
+      // Agrupa as letras por palavra: com cada letra em um inline-block, o
+      // navegador poderia quebrar a linha no meio da palavra (ex.: "chama /
+      // do"). O wrapper nowrap torna a palavra atômica — a quebra só ocorre
+      // nos espaços entre palavras.
+      for (const parte of texto.split(/(\s+)/)) {
+        if (!parte) continue
+        if (/^\s+$/.test(parte)) {
           frag.appendChild(document.createTextNode(' '))
           continue
         }
-        const span = document.createElement('span')
-        span.textContent = ch
-        span.dataset.letra = '1'
-        span.style.display = 'inline-block'
-        frag.appendChild(span)
-        letras.push(span)
+        const palavra = document.createElement('span')
+        palavra.style.display = 'inline-block'
+        palavra.style.whiteSpace = 'nowrap'
+        for (const ch of parte) {
+          const span = document.createElement('span')
+          span.textContent = ch
+          span.dataset.letra = '1'
+          span.style.display = 'inline-block'
+          palavra.appendChild(span)
+          letras.push(span)
+        }
+        frag.appendChild(palavra)
       }
       node.parentNode?.replaceChild(frag, node)
     } else if (node.nodeType === Node.ELEMENT_NODE) {

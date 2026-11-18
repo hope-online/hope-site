@@ -13,12 +13,12 @@ const links = [
 
 // Preview exibido ao passar o mouse sobre cada opção do menu
 const detalhes: Record<string, { img: string; tags: string[] }> = {
-  '#inicio': { img: '/fotos/DSC00051.jpg', tags: ['fé', 'adoração', 'comunidade'] },
-  '#sobre': { img: '/fotos/DSC00001.jpg', tags: ['acolher', 'família', 'pertencimento'] },
-  '#cultos': { img: '/fotos/DSC00061.jpg', tags: ['louvor', 'palavra', 'comunhão'] },
-  '#galeria': { img: '/fotos/DSC00021.jpg', tags: ['celebração', 'momentos', 'nossa casa'] },
-  '#ministerios': { img: '/fotos/DSC00071.jpg', tags: ['servir', 'chamado', 'times'] },
-  '#contato': { img: '/fotos/DSC00095.jpg', tags: ['domingo', '9h30', 'esperança'] },
+  '#inicio': { img: './fotos/DSC00051.jpg', tags: ['fé', 'adoração', 'comunidade'] },
+  '#sobre': { img: './fotos/DSC00001.jpg', tags: ['acolher', 'família', 'pertencimento'] },
+  '#cultos': { img: './fotos/DSC00061.jpg', tags: ['louvor', 'palavra', 'comunhão'] },
+  '#galeria': { img: './fotos/DSC00021.jpg', tags: ['celebração', 'momentos', 'nossa casa'] },
+  '#ministerios': { img: './fotos/DSC00071.jpg', tags: ['servir', 'chamado', 'times'] },
+  '#contato': { img: './fotos/DSC00095.jpg', tags: ['domingo', '9h30', 'esperança'] },
 }
 
 const posicoesTags = [
